@@ -3,15 +3,15 @@ variables {
   nomad_node_unique_name = "testing-validators"
   chain_id               = "qwoyn-1"
   account_key_prefix     = "qwoynpub"
-  consensus_key_prefix   = "qwoynvaloper"
-  node_laddr             = ""
+  consensus_key_prefix   = "qwoynvalconspub"
+  node_laddr             = "149.28.14.103:26657"
 
   config_repo_url = "https://raw.githubusercontent.com/cephalopodequipment/config/main"
 }
 
-job "" {
+job "qwoyn-1" {
   datacenters = [
-    "aws-cac"
+    "dc1"
   ]
 
   type = "service"
